@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <style>
+        body{
+            background: #cccccc;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .form,label,input{
+            width: 50%;
+            height: px;
+        }
+        #name{
+            width: 50%;
+            height: 30px;
+
+        }
+        #addBtn{
+            height: 30px;
+            width: 20%;
+
+        }
+        #studentTable{
+            width: 60%;
+            height: 200px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Student Form</h1>
+    <div class="form">
+    <form id="studentForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <button type="submit" id="addBtn">Add Student</button>
+    </form>
+</div>
+<br>
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Serial No</th>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Student rows will be added here -->
+        </tbody>
+    </table>
+    <script>
+        var stuForm = document.getElementById("studentForm")
+        // var inp = document.getElementById("name")
+        var addBtn = document.getElementById("addBtn")
+        addBtn.addEventListener("click", function(){
+            var inp = document.getElementById("name").value
+            console.log(inp);
+            
+        })
+
+    
+    </script>
+</body>
+</html>
